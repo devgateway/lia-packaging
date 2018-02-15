@@ -1,0 +1,22 @@
+Source: lia
+Section: python
+Priority: optional
+Maintainer: Styopa Semenukha <ssemenukha@developmentgateway.org>
+Build-Depends:
+ debhelper (>= 11),
+ dh-python,
+ python3-all,
+ python3-setuptools,
+ markdown
+Recommends: ansible
+Standards-Version: 4.1.3
+Homepage: https://github.com/devgateway/lia
+X-Python3-Version: >= 3.4
+
+Package: lia
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Description: LDAP Inventory for Ansible
+ Lia is a helper script to query hosts, groups, and variables from your LDAP
+ server, and provide it to Ansible. Lia is highly configurable to support
+ caching and adjust to any LDAP schema.
